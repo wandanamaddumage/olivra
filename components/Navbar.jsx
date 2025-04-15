@@ -24,7 +24,7 @@ const Navbar = ({ Searchproducts }) => {
   ];
 
   return (
-    <nav>
+    <nav className="navbar">
       <Link href="/">
         <div
           style={{
