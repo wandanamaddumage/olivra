@@ -1,35 +1,64 @@
+"use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import { CiSearch } from "react-icons/ci";
 import { CgShoppingCart } from "react-icons/cg";
-import logo from "../src/assets/Logo.png";
+import logo from "../src/assets/olivra.png";
 import Link from "next/link";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import { useStateContext } from "../context/StateContext";
+import { usePathname } from "next/navigation";
 
 const Navbar = ({ Searchproducts }) => {
   const { showCart, setShowCart, totalQty } = useStateContext();
   const [toggleMenu, setToggleMenu] = useState(false);
+  const pathname = usePathname();
   // const [searchTerm, setSearchTerm] = useState('')
+
+  const navLinks = [
+    { href: "/female", label: "Female" },
+    { href: "/male", label: "Male" },
+    { href: "/kids", label: "Kids" },
+    { href: "/products", label: "All Products" },
+  ];
 
   return (
     <nav>
       <Link href="/">
-        <Image src={logo} width={140} height={25} alt="logo" />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+            color: "inherit",
+          }}
+        >
+          <Image src={logo} width={100} height={100} alt="logo" />
+          <span
+            style={{
+              fontSize: "2.5rem",
+              fontWeight: 700,
+              color: "#8ea092",
+            }}
+          >
+            Olivra
+          </span>
+        </div>
       </Link>
       <ul className="nav-links">
-        <Link href="/female">
-          <li>Female</li>
-        </Link>
-        <Link href="/male">
-          <li>Male</li>
-        </Link>
-        <Link href="/kids">
-          <li>Kids</li>
-        </Link>
-        <Link href="/products">
-          <li>All Products</li>
-        </Link>
+        {navLinks.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className={`nav-link ${
+                pathname === link.href ? "active-link" : ""
+              }`}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
       </ul>
 
       <div className="search-bar">
@@ -53,7 +82,6 @@ const Navbar = ({ Searchproducts }) => {
           <span className="cart-item-qty">{totalQty}</span>
         </button>
       )}
-
       <div className="navbar-smallscreen">
         <RiMenu3Line
           color="black"
