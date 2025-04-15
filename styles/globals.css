@@ -20,6 +20,7 @@ a {
 }
 
 .main-container {
+  margin-top: 5rem;
   flex: 1; /* this pushes the footer to the bottom */
 }
 
@@ -69,7 +70,7 @@ button,
   line-height: 15px;
   text-align: center;
   letter-spacing: 0.1em;
-  color: #0062f5;
+  color: #8ea092;
 }
 .subtitle h2 {
   font-weight: 700;
@@ -288,7 +289,7 @@ nav input {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: blue;
+  color: #8ea092;
   font-weight: 600;
 }
 .header-content h1 {
