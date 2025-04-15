@@ -25,7 +25,7 @@ const Navbar = ({ Searchproducts }) => {
 
   return (
     <nav>
-      <Link href="/" passHref>
+      <Link href="/">
         <div
           style={{
             display: "flex",
@@ -66,8 +66,9 @@ const Navbar = ({ Searchproducts }) => {
         <input type="text" placeholder="What you looking for" />
       </div>
       {/* onChange={(event) => {
-              setSearchTerm(event.target.value);
+              setSearchTerm(event.target.value); //new
           }} */}
+
       {showCart ? (
         <Link href="/cart">
           <button className="cart" onClick={() => setShowCart(false)}>
@@ -89,26 +90,14 @@ const Navbar = ({ Searchproducts }) => {
         />
         {toggleMenu && (
           <div className="navbar-smallscreen_overlay">
-            <Link href="/" passHref>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  textDecoration: "none",
-                  color: "inherit",
-                }}
-              >
-                <Image src={logo} width={100} height={100} alt="logo" />
-                <span
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: 700,
-                    color: "Green",
-                  }}
-                >
-                  Olivra
-                </span>
-              </div>
+            <Link href="/">
+              <Image
+                className="logo-small"
+                src={logo}
+                width={140}
+                height={25}
+                alt="logo"
+              />
             </Link>
             <RiCloseLine
               color="black"
