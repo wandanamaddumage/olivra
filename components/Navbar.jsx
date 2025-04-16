@@ -84,20 +84,32 @@ const Navbar = ({ Searchproducts }) => {
       )}
       <div className="navbar-smallscreen">
         <RiMenu3Line
-          color="black"
+          color="#8ea092"
           fontSize={27}
           onClick={() => setToggleMenu(true)}
         />
         {toggleMenu && (
           <div className="navbar-smallscreen_overlay">
             <Link href="/">
-              <Image
-                className="logo-small"
-                src={logo}
-                width={140}
-                height={25}
-                alt="logo"
-              />
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  textDecoration: "none",
+                  color: "inherit",
+                }}
+              >
+                <Image src={logo} width={100} height={100} alt="logo" />
+                <span
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: 700,
+                    color: "#8ea092",
+                  }}
+                >
+                  Olivra
+                </span>
+              </div>
             </Link>
             <RiCloseLine
               color="black"
