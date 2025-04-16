@@ -26,9 +26,9 @@ const Cart = () => {
       body: JSON.stringify(cartItems),
     });
 
-    console.log("body: ", body);
+    console.log("Request Body: ", cartItems);
 
-    if (response.statusCode === 500) return;
+    if (response.status === 500) return;
 
     const data = await response.json();
 
@@ -66,7 +66,7 @@ const Cart = () => {
                       <HiOutlineTrash size={28} />
                     </button>
                   </div>
-                  <p className="item-tag">Dress</p>
+                  <p className="item-tag">{item.tag}</p>
                   <p className="delivery-est">Delivery Estimation</p>
                   <p className="delivery-days">5 Working Days</p>
                   <div className="price-and-qty">
