@@ -14,7 +14,7 @@ const Navbar = ({ Searchproducts }) => {
   const { showCart, setShowCart, totalQty } = useStateContext();
   const [toggleMenu, setToggleMenu] = useState(false);
   const pathname = usePathname();
-  // const [searchTerm, setSearchTerm] = useState('')
+  // const [searchTerm, setSearchTerm] = useState("");
 
   const navLinks = [
     { href: "/female", label: "Female" },
@@ -63,7 +63,16 @@ const Navbar = ({ Searchproducts }) => {
 
       <div className="search-bar">
         <CiSearch />
-        <input type="text" placeholder="What you looking for" />
+        <input
+          type="text"
+          placeholder="What you looking for"
+          // value={searchTerm}
+          // onChange={(event) => {
+          //   const value = event.target.value;
+          //   setSearchTerm(value);
+          //   Searchproducts(value);
+          // }}
+        />
       </div>
       {/* onChange={(event) => {
               setSearchTerm(event.target.value); //new
