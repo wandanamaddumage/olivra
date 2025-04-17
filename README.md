@@ -36,7 +36,7 @@ For now the search bar is only for styling purposes and doesn't work properly ye
 
 The live site is deployed in vercel, but it seems that vercel can't render swiper js. In the meantime i'm still trying to find a solution
 
-- [Live Site URL](https://olivra-11ew.vercel.app/)
+- [Live Site URL](https://olivra.vercel.app/)
 
 ## My process
 
