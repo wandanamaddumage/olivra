@@ -63,7 +63,7 @@ I learned how to connect stripe as payment gate for e-commerce. Full code for co
 
 The development of this project can be continued by adding a search filter functionality, an e-commerce newsletter, activate the slider function for product section in homepage. In the near future, I'm going to explore react js search filters and maybe add that functionality myself.
 
-<!-- ### Useful resources
+<!--- ### Useful resources
 
 - [UI/UX Design Resources](https://ui8.net/) - This website provide many UI/UX design, some are even free.
 - [Tutorial Modern Full Stack ECommerce React Application with Stripe by JavaScript Mastery](https://www.youtube.com/watch?v=4mOkFXyxfsU&t=10459s) - This youtube tutorial really helps in understanding Next js and the use of sanity and stripe for e-commerce
